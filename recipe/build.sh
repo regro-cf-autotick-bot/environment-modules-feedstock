@@ -6,7 +6,7 @@ export INIT=''
 
 if [ "$(uname)" == "Darwin" ]; then
 	export INSTALL_ROOT=${PREFIX}
-	./configure --prefix=$PREFIX  --with-tcl=$PREFIX/Library/Frameworks/Tcl.framework/Versions/8.5/
+	./configure --prefix=$PREFIX  --with-tcl=$PREFIX/lib
 	make prefix=$PREFIX
 	make prefix=$PREFIX install 
 

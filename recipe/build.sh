@@ -6,7 +6,6 @@ export INIT=''
 
 if [ "$(uname)" == "Darwin" ]; then
 	export INSTALL_ROOT=${PREFIX}
-        find $PREFIX -name 'tclConfig*' 
 	./configure --prefix=$PREFIX  --with-tcl=$PREFIX/lib
 	make prefix=$PREFIX
 	make prefix=$PREFIX install 

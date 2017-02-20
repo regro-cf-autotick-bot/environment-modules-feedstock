@@ -10,20 +10,22 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: http://prdownloads.sourceforge.net/modules/modules-{{version}}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - environment-modules-tcl86.patch 
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
       - gcc  # [linux]
       - llvm  # [osx]
-      - tcl
+      - tk
       - zlib
   run:
       - libgcc  # [linux]
-      - tcl
+      - tk
       - zlib
 
 test:

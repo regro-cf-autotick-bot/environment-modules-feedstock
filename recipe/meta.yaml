@@ -15,18 +15,18 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
       - gcc  # [linux]
       - llvm  # [osx]
-      - tk
-      - zlib
+      - tk 8.5.*
+      - zlib 1.2.*
   run:
       - libgcc  # [linux]
-      - tk
-      - zlib
+      - tk 8.5.*
+      - zlib 1.2.*
 
 test:
   commands:
